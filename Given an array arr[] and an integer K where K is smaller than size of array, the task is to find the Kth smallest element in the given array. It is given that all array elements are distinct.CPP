@@ -18,3 +18,28 @@ Constraints:
 1 <= arr[i] <= 105
 1 <= K <= N
 */
+
+//method 1
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int findkthsmallest(int a[], int n, int k)
+{
+    sort(a,a+n);
+    return a[k-1];
+}
+int main()
+{int k,n,temp;
+  int min,max=0;
+cout<<"enter value of k";
+cin>>k;
+cout<<"enter no of array elements";
+cin>>n;
+int a[n];
+  for(int i= 0;i<n;i++)
+  {
+ cin>>a[i];
+  }
+cout << "K'th smallest element is " << findkthsmallest(a, n, k);
+  return 0;
+}
