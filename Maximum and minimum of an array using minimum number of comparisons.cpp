@@ -40,6 +40,12 @@ void main()
   {
  if (a[i]<min)
    min=a[i];
- else   
+ else (a[i]>max)
+   {
+   max=a[i];
+   }
+  cout<<"min:"<<min;
+ cout<<"max:"<<max;
   }
+ 
 }
