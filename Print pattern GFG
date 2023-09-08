@@ -1,0 +1,14 @@
+/*Print a sequence of numbers starting with N where A[0] = N, without using loop, in which  A[i+1] = A[i] - 5,  until A[i] > 0. After that A[i+1] = A[i] + 5  repeat it until A[i] = N.*/
+
+class Solution{
+public:
+    vector<int> pattern(int N){
+        if(N<=0){
+            return {N};
+        }
+        vector<int> arr=pattern(N-5);
+        arr.insert(arr.begin(), N);
+        arr.push_back(N);
+        return arr;
+    }
+};
